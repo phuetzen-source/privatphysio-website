@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRIVATPHYSIO MOBIL – Exzellente Therapie. Bei Ihnen zu Hause.</title>
+<meta name="description" content="Mobile Premium-Physiotherapie für Privatversicherte und Selbstzahler. 60 Minuten pro Behandlung, bei Ihnen zu Hause. Jetzt Termin anfragen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --petrol: #1E5752;
+  --petrol-deep: #163f3b;
+  --petrol-light: #2a6e68;
+  --gold: #D8B36C;
+  --gold-light: #e4c88a;
+  --gold-dark: #b8944d;
+  --cream: #FAFAF7;
+  --cream-warm: #F5F0E8;
+  --charcoal: #2D2D2D;
+  --sage: #98B8A5;
+  --sage-light: #c5d9cd;
+  --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--charcoal);
+  background: var(--cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  background: var(--petrol);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -20%;
+  width: 70%;
+  height: 130%;
+  background: radial-gradient(ellipse, rgba(216,179,108,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* Nav */
+.nav {
+  padding: 28px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  animation: fadeDown 0.8s ease-out;
+}
+
+.nav-logo img {
+  height: 36px;
+  filter: brightness(0) invert(1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: rgba(250,250,247,0.7);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.nav-cta {
+  padding: 10px 28px !important;
+  border: 1.5px solid var(--gold) !important;
+  color: var(--gold) !important;
+  border-radius: 2px;
+  transition: all 0.3s !important;
+}
+
+.nav-cta:hover {
+  background: var(--gold) !important;
+  color: var(--petrol) !important;
+}
+
+/* Hero Content */
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+  max-width: 900px;
+  position: relative;
+  z-index: 5;
+}
+
+.hero-tag {
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+  font-weight: 600;
+  animation: fadeUp 0.8s ease-out 0.2s both;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 5.5vw, 72px);
+  font-weight: 600;
+  color: var(--cream);
+  line-height: 1.1;
+  margin-bottom: 28px;
+  animation: fadeUp 0.8s ease-out 0.4s both;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: rgba(250,250,247,0.65);
+  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: 44px;
+  animation: fadeUp 0.8s ease-out 0.6s both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  animation: fadeUp 0.8s ease-out 0.8s both;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 16px 40px;
+  background: var(--gold);
+  color: var(--petrol);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(216,179,108,0.3);
+}
+
+.btn-ghost {
+  display: inline-block;
+  padding: 16px 40px;
+  color: var(--cream);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1.5px solid rgba(250,250,247,0.25);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Hero decorative line */
+.hero-deco {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 200px;
+  background: linear-gradient(180deg, transparent, var(--gold), transparent);
+  opacity: 0.3;
+  animation: fadeIn 1.2s ease-out 1s both;
+}
+
+/* ─── TRUST BAR ─── */
+.trust-bar {
+  background: var(--petrol-deep);
+  padding: 32px 60px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(250,250,247,0.5);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.trust-item .num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* ─── LEISTUNGEN ─── */
+.services {
+  padding: 120px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-tag {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 600;
+  color: var(--petrol);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.section-intro {
+  font-size: 17px;
+  color: rgba(45,45,45,0.6);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 64px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.service-card {
+  padding: 44px 36px;
+  background: var(--white);
+  border: 1px solid rgba(30,87,82,0.08);
+  border-radius: 4px;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(30,87,82,0.08);
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(30,87,82,0.06);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 20px;
+  color: var(--petrol);
+}
+
+.service-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--petrol);
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: rgba(45,45,45,0.55);
+  line-height: 1.65;
+}
+
+/* ─── SO FUNKTIONIERTS ─── */
+.process {
+  padding: 120px 60px;
+  background: var(--petrol);
+  position: relative;
+}
+
+.process::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.process .section-tag { color: var(--gold); }
+.process .section-title { color: var(--cream); }
+.process .section-intro { color: rgba(250,250,247,0.5); }
+
+.process-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  counter-reset: step;
+}
+
+.step {
+  counter-increment: step;
+  position: relative;
+}
+
+.step::before {
+  content: counter(step, decimal-leading-zero);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: rgba(216,179,108,0.15);
+  display: block;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.step h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+
+.step p {
+  font-size: 14px;
+  color: rgba(250,250,247,0.45);
+  line-height: 1.65;
+}
+
+/* ─── VORTEILE ─── */
+.benefits {
+  padding: 120px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.benefits-left {
+  position: sticky;
+  top: 80px;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 20px;
+  padding: 28px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.benefit-item:hover {
+  background: var(--white);
+  box-shadow: 0 8px 40px rgba(30,87,82,0.06);
+}
+
+.benefit-check {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  background: rgba(30,87,82,0.06);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--petrol);
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.benefit-item h4 {
+  font-size: 17px;
+  color: var(--petrol);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.benefit-item p {
+  font-size: 14px;
+  color: rgba(45,45,45,0.5);
+  line-height: 1.6;
+}
+
+/* ─── REGION ─── */
+.region {
+  padding: 100px 60px;
+  background: var(--cream-warm);
+  text-align: center;
+}
+
+.region-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.region .section-title {
+  margin-bottom: 24px;
+}
+
+.region p {
+  font-size: 17px;
+  color: rgba(45,45,45,0.6);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.region-tags {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.region-tag {
+  padding: 10px 24px;
+  background: var(--white);
+  border: 1px solid rgba(30,87,82,0.1);
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--petrol);
+  transition: all 0.3s;
+}
+
+.region-tag:hover {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--petrol);
+}
+
+/* ─── KARRIERE ─── */
+.career {
+  padding: 120px 60px;
+  background: var(--petrol);
+  position: relative;
+}
+
+.career::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.career-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.career .section-tag { color: var(--gold); }
+.career .section-title { color: var(--cream); margin-bottom: 24px; }
+
+.career p {
+  font-size: 16px;
+  color: rgba(250,250,247,0.55);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.career-perks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.perk {
+  padding: 28px;
+  background: rgba(250,250,247,0.04);
+  border: 1px solid rgba(250,250,247,0.06);
+  border-radius: 4px;
+}
+
+.perk-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.perk-label {
+  font-size: 13px;
+  color: rgba(250,250,247,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ─── CTA ─── */
+.cta {
+  padding: 120px 60px;
+  text-align: center;
+  position: relative;
+}
+
+.cta-inner {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.cta .section-title {
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 17px;
+  color: rgba(45,45,45,0.55);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.cta .btn-primary {
+  background: var(--petrol);
+  color: var(--cream);
+}
+
+.cta .btn-primary:hover {
+  background: var(--petrol-light);
+  box-shadow: 0 8px 30px rgba(30,87,82,0.2);
+}
+
+.cta-contact {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.cta-contact a {
+  font-size: 14px;
+  color: var(--petrol);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.cta-contact a:hover {
+  color: var(--gold-dark);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--charcoal);
+  padding: 48px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+footer .footer-brand {
+  font-size: 13px;
+  color: rgba(250,250,247,0.35);
+}
+
+footer nav {
+  display: flex;
+  gap: 28px;
+}
+
+footer nav a {
+  font-size: 13px;
+  color: rgba(250,250,247,0.35);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer nav a:hover {
+  color: var(--gold);
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .career-inner { grid-template-columns: 1fr; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .benefits-left { position: static; }
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 20px 24px; }
+  .nav-links { display: none; }
+  .hero-content { padding: 0 24px; }
+  .hero-deco { display: none; }
+  .trust-bar { padding: 24px; gap: 32px; }
+  .services, .benefits, .cta { padding: 80px 24px; }
+  .process, .career { padding: 80px 24px; }
+  .region { padding: 80px 24px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; gap: 32px; }
+  .career-perks { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  footer { padding: 36px 24px; flex-direction: column; text-align: center; }
+  footer nav { justify-content: center; }
+  .cta-contact { flex-direction: column; gap: 16px; }
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 100;
+}
+.menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--cream);
+  transition: 0.3s;
+}
+@media (max-width: 768px) {
+  .menu-toggle { display: flex; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero" id="start">
+  <nav class="nav">
+    <div class="nav-logo">
+      <svg width="180" height="28" viewBox="0 0 600 60" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="46" fill="#FAFAF7" font-family="'DM Sans', sans-serif" font-size="42" font-weight="700" letter-spacing="3">PRIVATPHYSIO</text>
+        <text x="460" y="46" fill="#FAFAF7" font-family="'DM Sans', sans-serif" font-size="42" font-weight="700" letter-spacing="3">MOBIL</text>
+      </svg>
+    </div>
+    <div class="nav-links">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#karriere">Karriere</a>
+      <a href="#kontakt" class="nav-cta">Termin anfragen</a>
+    </div>
+    <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="hero-content">
+    <p class="hero-tag">Mobile Premium-Physiotherapie</p>
+    <h1>Exzellente Therapie.<br><em>Bei Ihnen zu Hause.</em></h1>
+    <p class="hero-sub">60 Minuten individuelle Behandlung durch erfahrene Therapeut:innen – direkt bei Ihnen zu Hause. Für Privatversicherte und Selbstzahler.</p>
+    <div class="hero-actions">
+      <a href="#kontakt" class="btn-primary">Termin anfragen</a>
+      <a href="#leistungen" class="btn-ghost">Mehr erfahren</a>
+    </div>
+  </div>
+
+  <div class="hero-deco"></div>
+</section>
+
+<!-- ═══════ TRUST BAR ═══════ -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="num">60</span> Minuten pro Behandlung</div>
+  <div class="trust-item"><span class="num">100%</span> bei Ihnen zu Hause</div>
+  <div class="trust-item"><span class="num">PKV</span> & Selbstzahler</div>
+</div>
+
+<!-- ═══════ LEISTUNGEN ═══════ -->
+<section class="services reveal" id="leistungen">
+  <p class="section-tag">Leistungen</p>
+  <h2 class="section-title">Therapie ohne Kompromisse</h2>
+  <p class="section-intro">Wir bringen höchste therapeutische Qualität direkt zu Ihnen – persönlich, pünktlich und auf Ihre Bedürfnisse abgestimmt.</p>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">✦</div>
+      <h3>Krankengymnastik</h3>
+      <p>Individuelle Bewegungstherapie bei orthopädischen, chirurgischen und internistischen Beschwerden.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">✦</div>
+      <h3>Manuelle Therapie</h3>
+      <p>Gezielte Mobilisation von Gelenken und Wirbelsäule durch speziell ausgebildete Therapeut:innen.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">✦</div>
+      <h3>Neurologische Therapie</h3>
+      <p>Behandlung nach Bobath bei Schlaganfall, Parkinson und anderen neurologischen Erkrankungen.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">✦</div>
+      <h3>Postoperative Reha</h3>
+      <p>Frühzeitige Nachbehandlung nach Operationen – für eine schnelle und sichere Genesung.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">✦</div>
+      <h3>Geriatrische Therapie</h3>
+      <p>Einfühlsame Behandlung für ältere Menschen – Mobilität erhalten, Stürze verhindern, Lebensqualität steigern.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">✦</div>
+      <h3>Beckenbodentherapie</h3>
+      <p>Spezialisierte Therapie bei Inkontinenz, nach Geburten und bei Beckenbodendysfunktion.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ ABLAUF ═══════ -->
+<section class="process" id="ablauf">
+  <div class="process-inner reveal">
+    <p class="section-tag">So funktioniert's</p>
+    <h2 class="section-title">In vier Schritten zu Ihrer Therapie</h2>
+    <p class="section-intro">Kein Wartezimmer. Kein Zeitdruck. Nur erstklassige Behandlung – bei Ihnen zu Hause.</p>
+
+    <div class="steps">
+      <div class="step">
+        <h3>Kontakt aufnehmen</h3>
+        <p>Rufen Sie uns an oder schreiben Sie uns. Wir klären gemeinsam Ihr Anliegen und den Therapiebedarf.</p>
+      </div>
+      <div class="step">
+        <h3>Rezept einreichen</h3>
+        <p>Senden Sie uns Ihr Privatrezept zu – per Mail, Post oder Foto. Wir kümmern uns um den Rest.</p>
+      </div>
+      <div class="step">
+        <h3>Termin erhalten</h3>
+        <p>Wir planen Ihre Behandlungstermine passend zu Ihrem Alltag – zuverlässig und pünktlich.</p>
+      </div>
+      <div class="step">
+        <h3>Therapie genießen</h3>
+        <p>60 Minuten volle Aufmerksamkeit. In Ihrer vertrauten Umgebung. Ohne Anfahrt, ohne Stress.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ VORTEILE ═══════ -->
+<section class="benefits reveal" id="vorteile">
+  <div class="benefits-grid">
+    <div class="benefits-left">
+      <p class="section-tag">Ihre Vorteile</p>
+      <h2 class="section-title">Warum PRIVATPHYSIO MOBIL?</h2>
+      <p class="section-intro">Wir glauben, dass exzellente Therapie Zeit, Raum und Vertrauen braucht. Genau das bieten wir.</p>
+    </div>
+    <div class="benefits-list">
+      <div class="benefit-item">
+        <div class="benefit-check">✓</div>
+        <div>
+          <h4>60 Minuten volle Therapiezeit</h4>
+          <p>Keine gekürzten Einheiten, kein Zeitdruck. Jede Behandlung dauert eine volle Stunde.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-check">✓</div>
+        <div>
+          <h4>Behandlung bei Ihnen zu Hause</h4>
+          <p>Kein Wartezimmer, keine Anfahrt. Ihre Therapie findet in Ihrer vertrauten Umgebung statt.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-check">✓</div>
+        <div>
+          <h4>Feste Therapeut:in</h4>
+          <p>Sie werden durchgängig von derselben Person betreut – für Vertrauen und Therapieerfolg.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-check">✓</div>
+        <div>
+          <h4>Einfache Abrechnung</h4>
+          <p>Wir rechnen direkt mit Ihnen auf Privatrezept-Basis ab. Sie reichen die Rechnung bei Ihrer Versicherung ein.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-check">✓</div>
+        <div>
+          <h4>Höchste therapeutische Qualität</h4>
+          <p>Erfahrene, spezialisierte Therapeut:innen mit regelmäßiger Fortbildung und echtem Qualitätsanspruch.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ REGION ═══════ -->
+<section class="region reveal">
+  <div class="region-inner">
+    <p class="section-tag">Einsatzgebiet</p>
+    <h2 class="section-title">Wir kommen zu Ihnen</h2>
+    <p>Aktuell versorgen wir Patient:innen in folgenden Regionen. Unser Einsatzgebiet wächst stetig.</p>
+    <div class="region-tags">
+      <span class="region-tag">Leverkusen</span>
+      <span class="region-tag">Köln</span>
+      <span class="region-tag">Bergisch Gladbach</span>
+      <span class="region-tag">Burscheid</span>
+      <span class="region-tag">Odenthal</span>
+      <span class="region-tag">Solingen</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ KARRIERE ═══════ -->
+<section class="career" id="karriere">
+  <div class="career-inner reveal">
+    <div>
+      <p class="section-tag">Karriere</p>
+      <h2 class="section-title">Therapie, wie sie sein sollte</h2>
+      <p>Raus aus dem 20-Minuten-Takt. Rein in die mobile Premium-Therapie. Wir suchen Physiotherapeut:innen, die mehr wollen – mehr Zeit, mehr Gehalt, mehr Wertschätzung.</p>
+      <a href="mailto:karriere@privatphysio-mobil.de" class="btn-primary" style="margin-top:12px;">Jetzt bewerben</a>
+    </div>
+    <div class="career-perks">
+      <div class="perk">
+        <div class="perk-value">60 Min.</div>
+        <div class="perk-label">pro Behandlung</div>
+      </div>
+      <div class="perk">
+        <div class="perk-value">6</div>
+        <div class="perk-label">Patient:innen pro Tag</div>
+      </div>
+      <div class="perk">
+        <div class="perk-value">PKW</div>
+        <div class="perk-label">Firmenwagen inkl.</div>
+      </div>
+      <div class="perk">
+        <div class="perk-value">Fort­bildung</div>
+        <div class="perk-label">Budget & freie Tage</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CTA ═══════ -->
+<section class="cta" id="kontakt">
+  <div class="cta-inner reveal">
+    <p class="section-tag">Kontakt</p>
+    <h2 class="section-title">Bereit für Ihre Therapie?</h2>
+    <p>Nehmen Sie Kontakt mit uns auf – wir beraten Sie unverbindlich und finden gemeinsam den richtigen Therapieweg für Sie.</p>
+    <a href="mailto:info@privatphysio-mobil.de" class="btn-primary">Termin anfragen</a>
+    <div class="cta-contact">
+      <a href="tel:+4915773676940">✆ 0157 7367 6940</a>
+      <a href="mailto:info@privatphysio-mobil.de">✉ info@privatphysio-mobil.de</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+  <div class="footer-brand">© 2026 PRIVATPHYSIO MOBIL – Exzellente Therapie. Bei Ihnen zu Hause.</div>
+  <nav>
+    <a href="#impressum" onclick="document.getElementById('impressum-modal').style.display='flex'">Impressum</a>
+    <a href="#" onclick="document.getElementById('datenschutz-modal').style.display='flex'; return false;">Datenschutz</a>
+  </nav>
+</footer>
+
+<!-- Impressum Modal -->
+<div id="impressum-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center; padding:24px;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:var(--cream); max-width:600px; width:100%; padding:48px; border-radius:4px; position:relative; max-height:80vh; overflow-y:auto;">
+    <button onclick="document.getElementById('impressum-modal').style.display='none'" style="position:absolute; top:16px; right:20px; background:none; border:none; font-size:24px; cursor:pointer; color:var(--charcoal);">✕</button>
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--petrol); margin-bottom:24px;">Impressum</h3>
+    <p style="font-size:15px; line-height:1.8; color:var(--charcoal);">
+      <strong>Privatphysio mobil GmbH i. G.</strong><br>
+      An der Fuchskuhl 9b<br>
+      51379 Leverkusen<br><br>
+      <strong>Telefon:</strong> 0157 7367 6940<br>
+      <strong>E-Mail:</strong> info@privatphysio-mobil.de<br><br>
+      <strong>Vertreten durch:</strong><br>
+      Geschäftsführer: Paul Hützen<br><br>
+      <em>Handelsregistereintragung ist beantragt.</em>
+    </p>
+  </div>
+</div>
+
+<!-- Datenschutz Modal -->
+<div id="datenschutz-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center; padding:24px;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:var(--cream); max-width:700px; width:100%; padding:48px; border-radius:4px; position:relative; max-height:85vh; overflow-y:auto;">
+    <button onclick="document.getElementById('datenschutz-modal').style.display='none'" style="position:absolute; top:16px; right:20px; background:none; border:none; font-size:24px; cursor:pointer; color:var(--charcoal);">✕</button>
+    <div style="font-size:14px; line-height:1.9; color:var(--charcoal);">
+      <h3 style="font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--petrol); margin-bottom:24px;">Datenschutzerklärung</h3>
+
+      <h4 style="color:var(--petrol); margin-top:24px; margin-bottom:8px;">1. Verantwortlicher</h4>
+      <p>Privatphysio mobil GmbH i. G.<br>
+      An der Fuchskuhl 9b<br>
+      51379 Leverkusen<br>
+      Telefon: 0157 7367 6940<br>
+      E-Mail: info@privatphysio-mobil.de</p>
+
+      <h4 style="color:var(--petrol); margin-top:24px; margin-bottom:8px;">2. Allgemeines zur Datenverarbeitung</h4>
+      <p>Wir verarbeiten personenbezogene Daten unserer Nutzer grundsätzlich nur, soweit dies zur Bereitstellung einer funktionsfähigen Website sowie unserer Inhalte und Leistungen erforderlich ist. Die Verarbeitung personenbezogener Daten unserer Nutzer erfolgt regelmäßig nur nach Einwilligung des Nutzers. Eine Ausnahme gilt in solchen Fällen, in denen eine vorherige Einholung einer Einwilligung aus tatsächlichen Gründen nicht möglich ist und die Verarbeitung der Daten durch gesetzliche Vorschriften gestattet ist.</p>
+
+      <h4 style="color:var(--petrol); margin-top:24px; margin-bottom:8px;">3. Rechtsgrundlagen</h4>
+      <p>Soweit wir für Verarbeitungsvorgänge personenbezogener Daten eine Einwilligung der betroffenen Person einholen, dient Art. 6 Abs. 1 lit. a DSGVO als Rechtsgrundlage. Bei der Verarbeitung von personenbezogenen Daten, die zur Erfüllung eines Vertrages erforderlich ist, dient Art. 6 Abs. 1 lit. b DSGVO als Rechtsgrundlage. Soweit eine Verarbeitung personenbezogener Daten zur Erfüllung einer rechtlichen Verpflichtung erforderlich ist, dient Art. 6 Abs. 1 lit. c DSGVO als Rechtsgrundlage. Ist die Verarbeitung zur Wahrung eines berechtigten Interesses unseres Unternehmens oder eines Dritten erforderlich und überwiegen die Interessen, Grundrechte und Grundfreiheiten des Betroffenen das erstgenannte Interesse nicht, so dient Art. 6 Abs. 1 lit. f DSGVO als Rechtsgrundlage.</p>
+
+      <h4 style="color:var(--petrol); margin-top:24px; margin-bottom:8px;">4. Bereitstellung der Website und Erstellung von Logfiles</h4>
+      <p>Bei jedem Aufruf unserer Internetseite erfasst unser System automatisiert Daten und Informationen des aufrufenden Rechners. Folgende Daten werden hierbei erhoben: Browsertyp und -version, verwendetes Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage und IP-Adresse. Die Daten werden in den Logfiles unseres Systems gespeichert. Eine Speicherung dieser Daten zusammen mit anderen personenbezogenen Daten des Nutzers findet nicht statt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Die vorübergehende Speicherung der IP-Adresse durch das System ist notwendig, um eine Auslieferung der Website an den Rechner des Nutzers zu ermöglichen. Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind.</p>
+
+      <h4 style="color:var(--petrol); margin-top:24px; margin-bottom:8px;">5. Kontaktaufnahme per E-Mail und Telefon</h4>
+      <p>Wenn Sie uns per E-Mail oder Telefon kontaktieren, werden die von Ihnen mitgeteilten Daten (z. B. Name, E-Mail-Adresse, Telefonnummer, Inhalt Ihrer Anfrage) von uns gespeichert, um Ihre Anfrage zu bearbeiten. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO). Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+
+      <h4 style="color:var(--petrol); margin-top:24px; margin-bottom:8px;">6. Ihre Rechte</h4>
+      <p>Sie haben gegenüber uns folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten: Recht auf Auskunft (Art. 15 DSGVO), Recht auf Berichtigung (Art. 16 DSGVO), Recht auf Löschung (Art. 17 DSGVO), Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO), Recht auf Datenübertragbarkeit (Art. 20 DSGVO), Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO). Sie haben zudem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren.</p>
+
+      <h4 style="color:var(--petrol); margin-top:24px; margin-bottom:8px;">7. Cookies</h4>
+      <p>Diese Website verwendet keine Cookies und keine Tracking-Tools. Es findet keine Profilbildung oder Analyse des Nutzerverhaltens statt.</p>
+
+      <h4 style="color:var(--petrol); margin-top:24px; margin-bottom:8px;">8. Hosting</h4>
+      <p>Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich insbesondere um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln. Der Einsatz des Hosters erfolgt im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).</p>
+
+      <p style="margin-top:24px; color:rgba(45,45,45,0.5);"><em>Stand: März 2026</em></p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
