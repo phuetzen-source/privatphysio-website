@@ -246,7 +246,7 @@ wlSubmitted=true;
 const b=document.getElementById('wl-submit');b.textContent='Wird eingetragen...';b.disabled=true;b.style.opacity='.6';
 const num='PPM-'+String(Math.floor(Math.random()*9000)+1000);
 fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({access_key:'9084dc7d-15ed-4a91-bcdf-162eb2613c2a',subject:'Warteliste: '+n,from_name:'PRIVATPHYSIO MOBIL',name:n,phone:p,email:san(em)||'–',plz:san(plz)||'–',versicherung:san(document.getElementById('wl-insurance').value)||'–',beschwerdebild:san(document.getElementById('wl-beschwerde').value)||'–',nummer:num})}).then(()=>show(num)).catch(()=>show(num));
-function show(x){document.getElementById('wl-number').textContent=x;document.getElementById('wl-form-fields').style.display='none';document.getElementById('wl-success').style.display='block';}
+function show(x){window.location.href='danke.html';}
 }
 // Cookie Consent
 function acceptCookies(){localStorage.setItem('cc','a');document.getElementById('cookie-banner').style.display='none';loadTracking();}
