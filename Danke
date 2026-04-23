@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vielen Dank – PRIVATPHYSIO MOBIL</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google Ads Conversion Tracking -->
+<!-- Hier dein Google Ads gtag.js Snippet einfügen, z.B.:
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-XXXXXXXXX');
+gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/XXXXXX'});
+</script>
+-->
+<!-- Google Analytics (nur wenn Cookie-Consent gegeben) -->
+<script>
+if(localStorage.getItem('cc')==='a'){
+var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-W8QGFQTJF9';s.async=true;document.head.appendChild(s);
+s.onload=function(){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-W8QGFQTJF9',{anonymize_ip:true});};
+}
+</script>
+<style>
+:root{--petrol:#1E5752;--gold:#D8B36C;--gold-light:#e4c88a;--cream:#FAFAF7;--cream-warm:#F5F0E8;--charcoal:#2D2D2D;--white:#fff}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',sans-serif;color:var(--charcoal);background:var(--cream);min-height:100vh;display:flex;flex-direction:column}
+.nav{padding:28px 60px;display:flex;justify-content:space-between;align-items:center;background:var(--petrol)}.nav-logo{font-size:16px;font-weight:700;color:var(--cream);letter-spacing:2px;text-transform:uppercase;text-decoration:none}
+.thank-you{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 24px;text-align:center}
+.thank-you-inner{max-width:560px}
+.check-circle{width:80px;height:80px;border-radius:50%;background:#22C55E;margin:0 auto 28px;display:flex;align-items:center;justify-content:center;animation:scaleIn .5s ease-out}
+.check-circle svg{width:40px;height:40px}
+.thank-you h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,44px);font-weight:600;color:var(--petrol);line-height:1.2;margin-bottom:16px}
+.thank-you p{font-size:17px;color:#555;line-height:1.7;margin-bottom:24px}
+.next-steps{text-align:left;background:var(--white);border:1px solid rgba(30,87,82,.08);border-radius:4px;padding:28px 32px;margin:32px 0}
+.next-steps h3{font-size:15px;font-weight:700;color:var(--petrol);margin-bottom:16px;text-transform:uppercase;letter-spacing:1px}
+.step-item{display:flex;gap:14px;margin-bottom:14px;align-items:flex-start}
+.step-num{width:28px;height:28px;min-width:28px;border-radius:50%;background:var(--petrol);color:var(--cream);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.step-text{font-size:15px;color:#555;line-height:1.6}
+.share-box{background:var(--cream-warm);border-radius:4px;padding:24px;margin-top:32px}
+.share-box p{font-size:15px;color:var(--petrol);font-weight:600;margin-bottom:14px}
+.btn-wa{display:inline-block;padding:12px 28px;background:#25D366;color:white;border-radius:4px;text-decoration:none;font-size:14px;font-weight:600;transition:all .3s}.btn-wa:hover{background:#1da851;transform:translateY(-2px)}
+.btn-back{display:inline-block;margin-top:24px;padding:14px 36px;background:var(--petrol);color:var(--cream);font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all .3s}.btn-back:hover{background:#2a6e68;transform:translateY(-2px)}
+.contact-line{font-size:14px;color:#777;margin-top:20px}
+.contact-line a{color:var(--petrol);text-decoration:none;font-weight:500}
+footer{background:var(--charcoal);padding:36px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}footer span{font-size:13px;color:rgba(250,250,247,.7)}footer nav{display:flex;gap:20px}footer a{font-size:13px;color:rgba(250,250,247,.7);text-decoration:none;transition:color .3s}footer a:hover{color:var(--gold)}
+@keyframes scaleIn{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+@media(max-width:768px){.nav{padding:20px 24px}footer{padding:24px;flex-direction:column;text-align:center}.next-steps{padding:20px}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">PRIVATPHYSIO MOBIL</a>
+</nav>
+
+<main class="thank-you">
+<div class="thank-you-inner">
+
+<div class="check-circle">
+<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+</div>
+
+<h1>Sie sind auf der Warteliste!</h1>
+<p>Vielen Dank für Ihr Interesse an PRIVATPHYSIO MOBIL. Wir haben Ihre Daten erhalten und melden uns bei Ihnen, sobald Termine in Ihrer Region verfügbar sind.</p>
+
+<div class="next-steps">
+<h3>So geht es weiter</h3>
+<div class="step-item"><div class="step-num">1</div><div class="step-text">Wir prüfen Ihre Angaben und Ihre Region.</div></div>
+<div class="step-item"><div class="step-num">2</div><div class="step-text">Sie erhalten einen persönlichen Rückruf von uns.</div></div>
+<div class="step-item"><div class="step-num">3</div><div class="step-text">Gemeinsam klären wir Ihr Anliegen und planen die erste Behandlung.</div></div>
+</div>
+
+<div class="share-box">
+<p>Kennen Sie jemanden, der auch Physiotherapie zu Hause braucht?</p>
+<a href="https://wa.me/?text=Ich%20habe%20mich%20bei%20PRIVATPHYSIO%20MOBIL%20auf%20die%20Warteliste%20gesetzt%20%E2%80%93%20mobile%20Physiotherapie%20als%20Hausbesuch%20f%C3%BCr%20Privatpatienten.%20Schau%20mal%3A%20https%3A%2F%2Fprivatphysio-mobil.de" target="_blank" rel="noopener" class="btn-wa">Per WhatsApp teilen</a>
+</div>
+
+<a href="index.html" class="btn-back">Zurück zur Startseite</a>
+
+<p class="contact-line">Fragen? <a href="tel:+4915773676940">0157 7367 6940</a> oder <a href="mailto:info@privatphysio-mobil.de">info@privatphysio-mobil.de</a></p>
+
+</div>
+</main>
+
+<footer>
+<span>© 2026 PRIVATPHYSIO MOBIL – Paul Hützen · An der Fuchskuhl 9b · 51379 Leverkusen</span>
+<nav><a href="index.html">Startseite</a><a href="#" onclick="document.getElementById('impressum-modal').style.display='flex';return false;">Impressum</a></nav>
+</footer>
+
+<div id="impressum-modal" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:1000;justify-content:center;align-items:center;padding:24px;" onclick="if(event.target===this)this.style.display='none'"><div style="background:#FAFAF7;max-width:600px;width:100%;padding:48px;border-radius:4px;position:relative;max-height:80vh;overflow-y:auto;"><button onclick="document.getElementById('impressum-modal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;">✕</button><h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#1E5752;margin-bottom:24px;">Impressum</h3><p style="font-size:15px;line-height:1.8;"><strong>PRIVATPHYSIO MOBIL</strong><br>Paul Hützen<br>An der Fuchskuhl 9b<br>51379 Leverkusen<br><br><strong>Telefon:</strong> 0157 7367 6940<br><strong>E-Mail:</strong> info@privatphysio-mobil.de<br><br><em>USt-IdNr. wird nachgetragen</em></p></div></div>
+
+</body>
+</html>
