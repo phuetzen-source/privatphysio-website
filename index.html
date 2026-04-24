@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>PRIVATPHYSIO MOBIL – In Vorbereitung</title>
+  <meta name="description" content="PRIVATPHYSIO MOBIL – Premium-Physiotherapie im häuslichen Umfeld. Unser Angebot startet zu einem späteren Zeitpunkt.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --petrol: #1E5752;
+      --petrol-dark: #143E3A;
+      --gold: #D8B36C;
+      --gold-soft: #E8CE9A;
+      --cream: #FAFAF7;
+      --cream-warm: #F2EEE5;
+      --charcoal: #2D2D2D;
+      --muted: #6B6B6B;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Subtle paper texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(30, 87, 82, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(216, 179, 108, 0.04) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Grain overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+      opacity: 0.25;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 2rem;
+    }
+
+    /* Header */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--petrol);
+      font-weight: 500;
+      opacity: 0;
+      animation: fadeIn 1s ease-out 0.2s forwards;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid var(--petrol);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .brand-mark::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    /* Main content */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 780px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 4rem 0;
+    }
+
+    .status-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 1s ease-out 0.4s forwards;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .status-dot::before {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0.3;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: clamp(2.75rem, 7vw, 5.5rem);
+      line-height: 1.02;
+      color: var(--petrol);
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 1.2s ease-out 0.6s forwards;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .lede {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--charcoal);
+      max-width: 560px;
+      margin-bottom: 3rem;
+      font-weight: 300;
+      opacity: 0;
+      animation: fadeUp 1.2s ease-out 0.8s forwards;
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      margin: 2.5rem 0 2rem;
+      opacity: 0;
+      animation: expandDivider 1s ease-out 1s forwards;
+    }
+
+    /* Contact block */
+    .contact {
+      opacity: 0;
+      animation: fadeUp 1.2s ease-out 1.1s forwards;
+    }
+
+    .contact-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.875rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      color: var(--petrol);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease, transform 0.3s ease;
+      width: fit-content;
+    }
+
+    .contact-item:hover {
+      color: var(--gold);
+      transform: translateX(4px);
+    }
+
+    .contact-item-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(30, 87, 82, 0.12);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      opacity: 0;
+      animation: fadeIn 1s ease-out 1.4s forwards;
+    }
+
+    footer button {
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 0;
+      letter-spacing: 0.05em;
+      transition: color 0.2s ease;
+    }
+
+    footer button:hover {
+      color: var(--petrol);
+    }
+
+    footer .links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 62, 58, 0.5);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--cream);
+      max-width: 640px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 3rem;
+      position: relative;
+      border-top: 3px solid var(--gold);
+      box-shadow: 0 20px 60px rgba(20, 62, 58, 0.25);
+      animation: slideUp 0.4s ease-out;
+    }
+
+    .modal h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--petrol);
+      margin-bottom: 1.5rem;
+    }
+
+    .modal h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--petrol);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .modal p, .modal address {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--charcoal);
+      margin-bottom: 0.75rem;
+      font-style: normal;
+    }
+
+    .modal a {
+      color: var(--petrol);
+      text-decoration: underline;
+      text-decoration-color: var(--gold);
+      text-underline-offset: 3px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      width: 32px;
+      height: 32px;
+      background: none;
+      border: 1px solid var(--petrol);
+      border-radius: 50%;
+      color: var(--petrol);
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .modal-close:hover {
+      background: var(--petrol);
+      color: var(--cream);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes expandDivider {
+      from {
+        opacity: 0;
+        width: 0;
+      }
+      to {
+        opacity: 1;
+        width: 48px;
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+      }
+      50% {
+        transform: scale(1.6);
+        opacity: 0;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .container {
+        padding: 2rem 1.5rem;
+      }
+
+      main {
+        padding: 2rem 0;
+      }
+
+      .lede {
+        font-size: 1rem;
+      }
+
+      .contact-item {
+        font-size: 1.25rem;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .modal {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <span>Privatphysio Mobil</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="status-tag">
+        <span class="status-dot"></span>
+        <span>Start in Vorbereitung</span>
+      </div>
+
+      <h1>Exzellente Therapie.<br><em>Bei Ihnen zu Hause.</em></h1>
+
+      <p class="lede">
+        Unser Angebot für Premium-Physiotherapie im häuslichen Umfeld befindet sich derzeit in der Finalisierung.
+        Für persönliche Anfragen, Arztkooperationen oder Rückfragen stehen wir Ihnen bereits jetzt direkt zur Verfügung.
+      </p>
+
+      <div class="divider"></div>
+
+      <div class="contact">
+        <div class="contact-label">Kontakt</div>
+        <div class="contact-items">
+          <a href="mailto:info@privatphysio-mobil.de" class="contact-item">
+            info@privatphysio-mobil.de
+          </a>
+          <a href="tel:+4915773676940" class="contact-item">
+            0157 7367 6940
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div>© 2026 PRIVATPHYSIO MOBIL · Paul Hützen</div>
+      <div class="links">
+        <button onclick="openModal('impressum')">Impressum</button>
+        <button onclick="openModal('datenschutz')">Datenschutz</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Impressum Modal -->
+  <div class="modal-overlay" id="impressum-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('impressum')" aria-label="Schließen">×</button>
+      <h2>Impressum</h2>
+
+      <h3>Angaben gemäß § 5 TMG</h3>
+      <address>
+        PRIVATPHYSIO MOBIL<br>
+        Inhaber: Paul Hützen<br>
+        An der Fuchskuhl 9b<br>
+        51379 Leverkusen<br>
+        Deutschland
+      </address>
+
+      <h3>Kontakt</h3>
+      <p>
+        Telefon: 0157 7367 6940<br>
+        E-Mail: <a href="mailto:info@privatphysio-mobil.de">info@privatphysio-mobil.de</a>
+      </p>
+
+      <h3>Rechtsform</h3>
+      <p>Einzelunternehmen</p>
+
+      <h3>Umsatzsteuer-Identifikationsnummer</h3>
+      <p>Wird nachgetragen.</p>
+
+      <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+      <p>Paul Hützen, Anschrift wie oben.</p>
+
+      <h3>Streitschlichtung</h3>
+      <p>
+        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>.
+        Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+      </p>
+    </div>
+  </div>
+
+  <!-- Datenschutz Modal -->
+  <div class="modal-overlay" id="datenschutz-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('datenschutz')" aria-label="Schließen">×</button>
+      <h2>Datenschutz</h2>
+
+      <h3>Allgemeiner Hinweis</h3>
+      <p>
+        Diese Website dient ausschließlich der allgemeinen Information und dem Hinweis auf die
+        bevorstehende Aufnahme des Geschäftsbetriebs. Es werden keine Cookies gesetzt, keine
+        Analyse- oder Tracking-Dienste eingesetzt und keine personenbezogenen Daten über
+        Formulare erhoben.
+      </p>
+
+      <h3>Server-Logs</h3>
+      <p>
+        Beim Aufruf dieser Website werden durch den Hosting-Anbieter (Vercel Inc.) technisch
+        notwendige Zugriffsdaten in Server-Logs gespeichert. Diese umfassen u.a. IP-Adresse,
+        Datum und Uhrzeit des Zugriffs. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
+        Interesse an einem sicheren Betrieb der Website).
+      </p>
+
+      <h3>Kontaktaufnahme</h3>
+      <p>
+        Bei Kontaktaufnahme per E-Mail oder Telefon werden die angegebenen Daten ausschließlich
+        zum Zweck der Bearbeitung Ihrer Anfrage verarbeitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. b
+        und f DSGVO. Die Daten werden gelöscht, sobald sie für die Bearbeitung nicht mehr
+        erforderlich sind, soweit keine gesetzlichen Aufbewahrungspflichten bestehen.
+      </p>
+
+      <h3>Ihre Rechte</h3>
+      <p>
+        Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
+        Datenübertragbarkeit sowie Widerspruch. Zudem steht Ihnen ein Beschwerderecht bei einer
+        Aufsichtsbehörde zu.
+      </p>
+
+      <h3>Verantwortlicher</h3>
+      <p>
+        Paul Hützen, An der Fuchskuhl 9b, 51379 Leverkusen,
+        <a href="mailto:info@privatphysio-mobil.de">info@privatphysio-mobil.de</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id + '-modal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id + '-modal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close on overlay click
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          overlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(m => {
+          m.classList.remove('active');
+        });
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>
